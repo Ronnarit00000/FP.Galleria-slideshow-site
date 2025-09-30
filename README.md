@@ -21,26 +21,7 @@ Build a portfolio page by implementing a [Figma](https://www.figma.com/design/jj
 ## setup
 
 To setup the webpage locally: click on "Code" (dropdown list) then "Download ZIP".
-initialza project open terminal run script this.
 
----
-
-npm install
-
----
-
-for live demo run script
-
----
-
-npm run dev
-
----
-
-for build project
-
----
-
-npm run build
-
----
+- initialza project open terminal run script this.`npm install`
+- for live demo run script`npm run dev`
+- for build project `npm run build`
