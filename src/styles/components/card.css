@@ -1,0 +1,231 @@
+.card .wraps .head {
+  display: grid;
+  position: relative;
+}
+
+.card .wraps .head .name {
+  padding: 1.5rem;
+  background: var(--clr-white);
+}
+
+.card .wraps .head .btn {
+  font: inherit;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-white);
+  background: var(--clr-black);
+
+}
+
+.card .wraps .head .btn span {
+  color: var(--clr-white);
+}
+
+@media (max-width: 599px) {
+  .card .wraps {
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .card .wraps .head {
+    grid-template-rows: 7rem 7rem 3.5rem 1fr 4rem;
+  }
+
+  .card .wraps .head .image {
+    grid-area: 1 / 1 / 4 / 2;
+    height: 17.5rem;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .card .wraps .head .name {
+    grid-area: 3 / 1 / 5 / 2;
+    align-self: center;
+    width: min(100% - 2rem, 17.5rem);
+  }
+
+  .card .wraps .head .name>*+* {
+    margin-block-start: 0.5rem;
+  }
+
+  .card .wraps .head .artist {
+    grid-area: 5 / 1 / 6 / 2;
+    margin-inline-start: 1.5rem;
+    width: 4rem;
+    object-fit: scale-down;
+  }
+
+  .card .wraps .head .btn {
+    inset-block-start: 1rem;
+    inset-inline-start: 1rem;
+  }
+
+  .card .wraps .body {
+    position: relative;
+    margin-block-start: 4rem;
+  }
+
+  .card .wraps .body .year {
+    position: absolute;
+    z-index: -1;
+    top: -4rem;
+    right: 0;
+  }
+
+  .card .wraps .body .description {
+    a {
+      display: inline-block;
+    }
+  }
+
+  .card .wraps .body .description>*+* {
+    margin-block-start: 3rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .card .wraps {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+
+  .card .wraps .head {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 1.5rem;
+  }
+
+  .card .wraps .head .image {
+    grid-area: 1 / 1 / 3 / 2;
+    min-height: 35rem;
+    object-fit: cover;
+  }
+
+  .card .wraps .head .name {
+    grid-area: 1 / 1 / 2 / 3;
+    justify-self: end;
+    width: min(100%, 25rem);
+    padding: 0 4rem 4rem 4rem;
+  }
+
+  .card .wraps .head .name>*+* {
+    margin-block-start: 1.5rem;
+  }
+
+  .card .wraps .head .artist {
+    grid-area: 2 / 2 / 3 / 2;
+    width: 8rem;
+    object-fit: scale-down;
+    object-position: top;
+  }
+
+  .card .wraps .head .btn {
+    inset-block-end: 1.5rem;
+    inset-inline-start: 1.5rem;
+  }
+
+  .card .wraps .body {
+    margin-block-start: 4rem;
+    position: relative;
+  }
+
+  .card .wraps .body .year {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    line-height: 1;
+  }
+
+  .card .wraps .body .description {
+    margin-inline: auto;
+    padding: 4.5rem 0 0 0;
+    width: min(100% - 2rem * 2, 28rem);
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .card .wraps .body .description>*+* {
+    margin-block-start: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card .wraps {
+    padding: 3.5rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: minmax(30rem, 50rem) 34rem;
+    gap: 0 1rem;
+  }
+
+  .card .wraps .head {
+    min-height: 39rem;
+    grid-template-columns: minmax(0, 29rem) 1fr;
+    grid-template-rows: repeat(2, 15.5rem) repeat(2, 4rem);
+    gap: 0 1rem;
+  }
+
+  .card .wraps .head .image {
+    grid-area: 1 / 1 / 5 / 2;
+    height: 35rem;
+    object-fit: cover;
+  }
+
+  .card .wraps .head .name {
+    grid-area: 1 / 1 / 3 / 3;
+    align-self: start;
+    width: min(100%, 25rem);
+    justify-self: end;
+    padding: 0 4rem 4rem 4rem;
+  }
+
+  .card .wraps .head .name>*+* {
+    margin-block-start: 1.5rem;
+  }
+
+  .card .wraps .head .artist {
+    align-self: end;
+    grid-area: 3 / 2 / 5 / 3;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .card .wraps .head .btn {
+    inset-block-end: 6rem;
+    inset-inline-start: 2rem;
+  }
+
+  .card .wraps .body {
+    position: relative;
+  }
+
+  .card .wraps .body .description {
+    margin: 6rem 0 0 0;
+    width: min(100%, 25rem);
+    min-height: 28.5rem;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .card .wraps .body .description>*+* {
+    margin-block-start: 4rem;
+  }
+
+  .card .wraps .body .year {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    line-height: 1;
+  }
+}

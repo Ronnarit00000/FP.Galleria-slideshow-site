@@ -1,0 +1,40 @@
+.figure {
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.figure:hover::before {
+  background: oklch(from var(--clr-grey-400) l c h / 0.65);
+}
+
+.figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      oklch(from var(--clr-white) l c h / 0.0625),
+      oklch(from var(--clr-black) l c h / 0.85)) 84%;
+}
+
+.figure * {
+  color: var(--clr-white);
+}
+
+.figure .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figure .figcaption {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 2rem;
+  inset-block-end: 2rem;
+
+  >*+* {
+    margin-block-start: 0.5rem;
+  }
+}

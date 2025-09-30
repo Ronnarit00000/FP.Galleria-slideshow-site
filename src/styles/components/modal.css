@@ -1,0 +1,54 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: oklch(from var(--clr-black) l c h /.87);
+}
+
+.modal .item {
+  min-height: 100svh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal .item img {
+  object-fit: scale-down;
+  width: 20rem;
+}
+
+.modal .item button {
+  justify-self: end;
+  width: fit-content;
+  font: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--clr-white);
+}
+
+@media (max-width: 599px) {
+  .modal .item {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .modal .item {
+    gap: 2rem;
+  }
+
+  .modal .item img {
+    width: min(100%, 35rem);
+  }
+}
+
+@media (min-width: 1000px) {
+  .modal .item {
+    gap: 2rem;
+  }
+
+  .modal .item img {
+    width: min(100%, 50rem);
+  }
+}

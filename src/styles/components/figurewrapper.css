@@ -1,0 +1,21 @@
+.figure-wrapper {
+  padding-block: 1.5rem;
+  display: grid;
+  gap: 2.5rem;
+
+  >*>*+* {
+    margin-block-start: 2.5rem;
+  }
+
+  @media (max-width: 599px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 600px) and (max-width: 999px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

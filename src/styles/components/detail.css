@@ -1,0 +1,51 @@
+.detail {
+  padding-block: 1.5rem;
+}
+
+.detail .head {
+  display: grid;
+
+  & .name {
+    padding: 1.5rem;
+    width: fit-content;
+    background: var(--clr-white);
+  }
+
+  @media (max-width: 599px) {
+    grid-template-rows: repeat(2, 1fr) repeat(2, 3rem) auto;
+
+    & .image {
+      grid-area: 1 / 1 / 4 / 2;
+      height: 17.5rem;
+      object-fit: cover;
+    }
+
+    & .name {
+      grid-area: 3 / 1 / 5 / 2;
+      align-self: center;
+      width: min(100% - 2rem, 20rem);
+    }
+
+    & .name>*+* {
+      margin-block-start: 0.5rem;
+    }
+
+    & .artist {
+      grid-area: 5 / 1 / 6 / 2;
+      margin-inline-start: 1.5rem;
+      width: 4rem;
+    }
+  }
+}
+
+.detail .body {
+  position: relative;
+  margin-block-start: 4rem;
+
+  & .year {
+    position: absolute;
+    z-index: -1;
+    top: -4rem;
+    right: 0;
+  }
+}

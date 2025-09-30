@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+
+  /* font-family */
+  --ff-base: "Libre Baskerville", serif;
+
+  /* font-size */
+  /* fs-900: 200px */
+  /* fs-800: 100px */
+  /* fs-700: 56px */
+  /* fs-600: 24px */
+  /* fs-500: 18px */
+  /* fs-400: 15px */
+  /* fs-300: 14px */
+  /* fs-200: 13px */
+  /* fs-100: 12px */
+  /* fs-50: 10px */
+  /* fs-25: 9px */
+
+  --fs-900: clamp(11.25rem, 10.3571rem + 2.381vw, 12.5rem);
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.125rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 0.875rem;
+  --fs-200: 0.8125rem;
+  --fs-100: 0.75rem;
+  --fs-50: 0.625rem;
+  --fs-25: 0.5625rem;
+
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-grey-400: hsl(0, 0%, 49%);
+  --clr-grey-200: hsl(0, 0%, 85%);
+  --clr-grey-150: hsl(0, 0%, 90%);
+  --clr-grey-100: hsl(0, 0%, 95%);
+
+  /* for text */
+  --clr-accent-900: var(--clr-black);
+  --clr-accent-800: var(--clr-grey-400);
+  --clr-accent-700: var(--clr-grey-200);
+  --clr-accent-600: var(--clr-grey-150);
+  --clr-accent-500: var(--clr-grey-100);
+
+  /* for background */
+  --clr-neutral-900: var(--clr-white);
+
+  /* conatiner-size: */
+  /* 1120px */
+  --space-lr: 2rem;
+  --content-size: 85rem;
+  --container-size: min(100% - var(--space-lr) * 2, var(--content-size));
+}

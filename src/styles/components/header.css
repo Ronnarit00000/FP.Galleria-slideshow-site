@@ -1,0 +1,42 @@
+:root {
+  --header-height: 5rem;
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100svw;
+
+  border-bottom: 0.125rem solid var(--clr-grey-150);
+  background: var(--clr-white);
+
+}
+
+.header .navbar {
+  height: var(--header-height);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  gap: 0 1.5rem;
+}
+
+.header .navbar .nav-item img {
+  width: 7.5rem;
+  object-fit: scale-down;
+  object-position: center;
+
+  @media (min-width: 1000px) {
+    width: 10rem;
+  }
+}
+
+body:has(.header) {
+  padding-block-start: var(--header-height);
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --header-height: 6.5rem;
+  }
+}
