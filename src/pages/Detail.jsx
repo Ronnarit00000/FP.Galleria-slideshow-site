@@ -1,18 +1,18 @@
-import { useParams, useNavigate} from "react-router";
+import { useParams } from "react-router";
 import Card from "../components/Card";
 import Slider from "../components/Slider";
 import { useContext } from "react";
 import { GalleryContext } from "../contexts/GalleryContext";
+import Notfound from "./Notfound";
 
 export default function Detail() {
-  const navigate = useNavigate();
   const { id } = useParams();
   const { data } = useContext(GalleryContext);
 
   const position = data.findIndex(el => el.id == id);
 
   if(position == -1){
-    return navigate("*");
+    return <Notfound />
   }
 
   const firstPosition = 0;
